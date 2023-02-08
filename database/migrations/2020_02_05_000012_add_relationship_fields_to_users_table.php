@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRelationshipFieldsToUsersTable extends Migration
+return new class extends Migration
 {
     public function up()
     {
@@ -13,4 +13,4 @@ class AddRelationshipFieldsToUsersTable extends Migration
             $table->foreign('country_id')->references('id')->on('countries');
         });
     }
-}
+};

@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::redirect('/', '/login');
 
 Auth::routes();
@@ -63,4 +62,3 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'App\Htt
     Route::get('password', 'ChangePasswordController@edit')->name('password.edit');
     Route::post('password', 'ChangePasswordController@update')->name('password.update');
 });
-

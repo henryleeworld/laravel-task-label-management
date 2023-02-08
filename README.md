@@ -1,6 +1,6 @@
-# Laravel 8 任務標籤管理
+# Laravel 9 任務標籤管理
 
-通過任意標籤，您可以在出現的列表中快速查看帶有此標籤的所有任務。Laravel 8 任務標籤管理主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
+通過任意標籤，您可以在出現的列表中快速查看帶有此標籤的所有任務。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -30,8 +30,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/bLjSgZx.png)
+![](https://i.imgur.com/mj7cIwt.png)
 > 標籤幫助你將任務按照你習慣的工作方式整理分類
 
-![](https://i.imgur.com/wW0pDOs.png)
+![](https://i.imgur.com/7efqnaQ.png)
 > 使用標籤來為你的任務添加更多有用的資訊並保持整潔
