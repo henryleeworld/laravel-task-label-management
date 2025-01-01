@@ -14,11 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('task_id')->nullable();
-            $table->foreign('task_id')->references('id')->on('tasks');
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->id();
+            $table->foreignId('task_id')->nullable()->constrained();
+            $table->foreignId('user_id')->nullable()->constrained();
             $table->string('comment_text')->nullable();
             $table->timestamps();
             $table->softDeletes();

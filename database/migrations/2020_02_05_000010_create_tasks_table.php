@@ -9,9 +9,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedBigInteger('project_id')->nullable();
-            $table->foreign('project_id')->references('id')->on('projects');
+            $table->id();
+            $table->foreignId('project_id')->nullable()->constrained();
             $table->string('name')->nullable();
             $table->string('description')->nullable();
             $table->unsignedBigInteger('created_by_id')->nullable();

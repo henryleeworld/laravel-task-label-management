@@ -14,10 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('project_user', function (Blueprint $table) {
-            $table->unsignedBigInteger('project_id');
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('project_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
             $table->string('email');
             $table->dateTime('confirmed_at')->nullable();
         });

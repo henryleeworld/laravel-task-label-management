@@ -1,4 +1,4 @@
-# Laravel 9 任務標籤管理
+# Laravel 10 任務標籤管理
 
 通過任意標籤，您可以在出現的列表中快速查看帶有此標籤的所有任務。
 
@@ -20,9 +20,13 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
@@ -30,8 +34,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/mj7cIwt.png)
+![](https://i.imgur.com/bkD5lR0.png)
 > 標籤幫助你將任務按照你習慣的工作方式整理分類
 
-![](https://i.imgur.com/7efqnaQ.png)
+![](https://i.imgur.com/jhAAQ85.png)
 > 使用標籤來為你的任務添加更多有用的資訊並保持整潔

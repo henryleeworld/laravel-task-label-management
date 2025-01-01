@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('labels', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name');
             $table->unsignedBigInteger('created_by_id')->nullable();
             $table->foreign('created_by_id')->references('id')->on('users');

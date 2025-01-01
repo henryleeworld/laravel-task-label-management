@@ -14,9 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->unsignedBigInteger('plan_id');
             $table->foreign('plan_id')->references('id')->on('roles');
             $table->integer('paid_amount');

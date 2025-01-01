@@ -14,10 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('label_task', function (Blueprint $table) {
-            $table->unsignedInteger('label_id');
-            $table->foreign('label_id')->references('id')->on('labels');
-            $table->unsignedInteger('task_id');
-            $table->foreign('task_id')->references('id')->on('tasks');
+            $table->foreignId('label_id')->constrained();
+            $table->foreignId('task_id')->constrained();
         });
     }
 

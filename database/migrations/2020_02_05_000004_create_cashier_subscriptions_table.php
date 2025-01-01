@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('subscriptions', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('stripe_id');

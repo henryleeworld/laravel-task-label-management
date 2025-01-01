@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->string('name')->nullable();
             $table->longText('description')->nullable();
             $table->boolean('active')->default(0)->nullable();

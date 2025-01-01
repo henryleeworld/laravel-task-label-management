@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->string('title')->nullable();
             $table->string('stripe_plan_id')->nullable();
             $table->integer('price')->nullable();
